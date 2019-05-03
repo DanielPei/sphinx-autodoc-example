@@ -6,9 +6,9 @@
 Welcome to sphinx-autodoc-example's documentation!
 ==================================================
 
+Contents:
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    utils.rst
 
