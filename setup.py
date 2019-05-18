@@ -6,7 +6,7 @@
 # @Created : 10/05/2019 22:41
 
 from setuptools import setup, find_packages
-from tools.version import get_setup_version
+from src.tools.version import get_setup_version
 
 ProjectName='py_utils'
 Author='DanielPei'
@@ -37,7 +37,7 @@ setup(
         'Source': URL,
         'Tracker': '%s/issues' % URL,
     },
-    install_requires=open('requirement.txt').read().splitlines(),
+    install_requires=open('requirements.txt').read().splitlines(),
     classifiers=[
         'Development Status :: 1 - Dev',
         'Environment :: MacOS X',
@@ -57,4 +57,9 @@ setup(
         'Topic :: Software Development :: Version Control :: Git',
         'Topic :: Utilities',
     ],
+    entry_points = {
+        'console_scripts' :[
+            'pycmd=tools.cli:main'
+        ]
+    }
 )
